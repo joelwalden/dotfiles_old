@@ -7,7 +7,6 @@ source ~/.git-completion.sh
 
 # Dev aliases
 alias rspec="rspec --color -f d"
-alias startmysql="sudo -u mysql /opt/local/lib/mariadb/bin/mysqld_safe --datadir='/opt/local/var/db/mariadb'"
 alias irb="pry"
 alias gst="git status"
 alias be="bundle exec"
@@ -23,14 +22,9 @@ cd() { builtin cd "$@" && ls; }
 alias cd..="cd ../"
 alias ..="cd ../"
 alias ...="cd ../../"
-alias .3="cd ../../../"
-alias .4="cd ../../../../"
-alias .5="cd ../../../../../"
-alias edit="subl"
 alias f="open -a Finder ./"
 alias ~="cd ~"
 alias c="clear && ls"
-trash () { command mv "$@" ~/.Trash; }
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced

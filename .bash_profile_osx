@@ -1,1 +1,3 @@
 source ~/.bash_shared
+
+alias startmysql="sudo -u mysql /opt/local/lib/mariadb/bin/mysqld_safe --datadir='/opt/local/var/db/mariadb'"
