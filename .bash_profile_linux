@@ -1,1 +1,9 @@
 source ~/.bash_shared
+
+PATH=$PATH:/home/joel/elixir/bin
+
+#AndroidDev PATH
+PATH=${PATH}:~/.android/android-linux-sdk/sdk/tools
+PATH=${PATH}:~/.android/android-linux-sdk/sdk/platform-tools
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
