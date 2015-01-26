@@ -3,6 +3,7 @@ syntax enable
 set encoding=utf8
 
 set smarttab
+set expandtab
 set shiftwidth=2
 set tabstop=2
 set ai "Auto Indent

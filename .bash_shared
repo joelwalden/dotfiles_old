@@ -26,6 +26,15 @@ alias f="open -a Finder ./"
 alias ~="cd ~"
 alias c="clear && ls"
 
+# alias g to git
+function g {
+  if [[ $# > 0 ]]; then
+    git $@
+  else
+    git status
+  fi
+}
+
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
