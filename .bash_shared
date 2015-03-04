@@ -47,11 +47,11 @@ set_prompt () {
   # If the last command was successful, display a green checkmark
   # Else, display a red 'x'
   if [[ $last_command == 0 ]]; then
-    PS1+="\[$IGreen\]$Checkmark "
+    PS1+="\[$Green\]$Checkmark "
   else
-    PS1+="\[$IRed\]$FancyX "
+    PS1+="\[$Red\]$FancyX "
   fi
-  PS1+="\[$IGreen\][\u@\h]" # username@hostname
+  PS1+="\[$Blue\][\u@\h]" # username@hostname
 
   ## Change the git repo color based on status. This could be cleaner, but I need to crush error messages
    __git_ps1 | grep '[\*\+%]' > /dev/null
@@ -70,7 +70,7 @@ set_prompt () {
   fi
 
   PS1+="\[$GitColor\]\$(__git_ps1 '(%s)') " # Git status
-  PS1+="\[$IPurple\]\W/ \[$Color_Off\]$ " # Shortpath/ $
+  PS1+="\[$Purple\]\W/ \[$Color_Off\]$ " # Shortpath/ $
 }
 PROMPT_COMMAND='set_prompt'
 

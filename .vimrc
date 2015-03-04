@@ -1,4 +1,4 @@
-syntax enable
+execute pathogen#infect()
 
 set encoding=utf8
 
@@ -16,7 +16,10 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType ruby set omnifunc=rubycomplete#CompleteRuby
 
-execute pathogen#infect()
+syntax enable
+set background=dark
+colorscheme solarized
+
 
 "Treat long (wrapped) lines as break lines
 map j gj
