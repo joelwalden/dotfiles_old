@@ -15,3 +15,5 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
