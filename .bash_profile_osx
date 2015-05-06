@@ -1,6 +1,7 @@
 source ~/.bash_shared
 
 alias startmysql="sudo -u mysql /opt/local/lib/mariadb/bin/mysqld_safe --datadir='/opt/local/var/db/mariadb'"
+alias f="open -a Finder ./"
 
 ##
 # Your previous /Users/joel.walden/.bash_profile file was backed up as /Users/joel.walden/.bash_profile.macports-saved_2015-04-27_at_17:28:36

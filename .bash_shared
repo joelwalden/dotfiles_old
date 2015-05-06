@@ -12,7 +12,8 @@ alias gst="git status"
 alias be="bundle exec"
 
 # Make commands friendier
-alias ls="ls -G"
+alias ls="ls -G --color=auto"
+alias grep='grep --color=auto'
 alias header="curl -I"
 alias cp="cp -iv"
 alias mv="mv -iv"
@@ -22,7 +23,6 @@ cd() { builtin cd "$@" && ls; }
 alias cd..="cd ../"
 alias ..="cd ../"
 alias ...="cd ../../"
-alias f="open -a Finder ./"
 alias ~="cd ~"
 alias c="clear && ls"
 
