@@ -12,8 +12,7 @@ alias gst="git status"
 alias be="bundle exec"
 
 # Make commands friendier
-alias ls="ls -G --color=auto"
-alias grep='grep --color=auto'
+alias ls="ls -G"
 alias header="curl -I"
 alias cp="cp -iv"
 alias mv="mv -iv"
