@@ -6,8 +6,31 @@ set smarttab
 set expandtab
 set shiftwidth=2
 set tabstop=2
+set softtabstop=2
 set ai "Auto Indent
 set si "Smart Indent
+
+set number
+set cursorline
+set wildmenu "Tab completion menu
+set showmatch "Highlight matchind [{()}]
+
+set incsearch "Search as characters are entered
+set hlsearch "Highlight matches
+
+"Turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
+set foldenable "Enable folding
+set foldlevelstart=10 "Open most folds by default
+set foldnestmax=10
+set foldmethod=indent
+
+"Space opens/closes folds
+nnoremap <space> za
+
+"Highlight last inserted text
+nnoremap gV `[v`]
 
 inoremap <C-Space> <C-X><C-O>
 
@@ -17,6 +40,7 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType ruby set omnifunc=rubycomplete#CompleteRuby
 
 syntax enable
+set background=dark
 
 "Treat long (wrapped) lines as break lines
 map j gj
