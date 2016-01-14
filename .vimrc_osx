@@ -34,6 +34,12 @@ nnoremap gV `[v`]
 
 inoremap <C-Space> <C-X><C-O>
 
+"Autocomplete parens, braces, etc
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap {<space> {}<Esc>i
+inoremap {<CR> {<CR><BS>}<Esc>ko
+
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
