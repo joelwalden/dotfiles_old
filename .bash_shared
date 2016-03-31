@@ -5,6 +5,8 @@ GIT_PS1_SHOWUNTRACKEDFILES="Y"
 source ~/.git-prompt.sh
 source ~/.git-completion.sh
 
+set -o vi
+
 # Dev aliases
 alias rspec="rspec --color -f d"
 alias irb="pry"
