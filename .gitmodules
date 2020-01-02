@@ -29,3 +29,6 @@ url = https://github.com/tpope/vim-rails.git
 [submodule ".vim/bundle/vim-vroom"]
 path = .vim/bundle/vim-vroom
 url = https://github.com/skalnik/vim-vroom.git
+[submodule ".config/polybar/scripts/polybar-spotify"]
+	path = .config/polybar/scripts/polybar-spotify
+	url = https://github.com/Jvanrhijn/polybar-spotify.git
