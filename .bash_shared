@@ -42,50 +42,50 @@ function g {
   fi
 }
 
-alias gitroku="git push heroku master"
+#alias gitroku="git push heroku master"
 
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
+#export CLICOLOR=1
+#export LSCOLORS=GxFxCxDxBxegedabagaced
 
 
 ### Prompt. Yeah, it's fancy
-set_prompt () {
-  local last_command=$?
-  PS1=""
-
-  # If the last command was successful, display a green checkmark
-  # Else, display a red 'x'
-  if [[ $last_command == 0 ]]; then
-    PS1+="\[$Green\]$Checkmark "
-  else
-    PS1+="\[$Red\]$FancyX "
-  fi
-  PS1+="\[$Blue\][\u@\h]" # username@hostname
-
-  ## Change the git repo color based on status. This could be cleaner, but I need to crush error messages
-   __git_ps1 | grep '[\*\+%]' > /dev/null
-  if [[ $? != 0 ]]; then
-    GitColor=$Green
-  else
-    __git_ps1 | grep '+' > /dev/null
-    if [[ $? == 0 ]]; then
-      GitColor=$Yellow
-    fi
-
-    __git_ps1 | grep '[\*%]' > /dev/null
-    if [[ $? == 0 ]]; then
-      GitColor=$Red
-    fi
-  fi
-
-  PS1+="\[$GitColor\]\$(__git_ps1 '(%s)') " # Git status
-  PS1+="\[$Purple\]\W/ \[$Color_Off\]$ " # Shortpath/ $
-}
-PROMPT_COMMAND='set_prompt'
-
+#set_prompt () {
+#  local last_command=$?
+#  PS1=""
+#
+#  # If the last command was successful, display a green checkmark
+#  # Else, display a red 'x'
+#  if [[ $last_command == 0 ]]; then
+#    PS1+="\[$Green\]$Checkmark "
+#  else
+#    PS1+="\[$Red\]$FancyX "
+#  fi
+#  PS1+="\[$Blue\][\u@\h]" # username@hostname
+#
+#  ## Change the git repo color based on status. This could be cleaner, but I need to crush error messages
+#   __git_ps1 | grep '[\*\+%]' > /dev/null
+#  if [[ $? != 0 ]]; then
+#    GitColor=$Green
+#  else
+#    __git_ps1 | grep '+' > /dev/null
+#    if [[ $? == 0 ]]; then
+#      GitColor=$Yellow
+#    fi
+#
+#    __git_ps1 | grep '[\*%]' > /dev/null
+#    if [[ $? == 0 ]]; then
+#      GitColor=$Red
+#    fi
+#  fi
+#
+#  PS1+="\[$GitColor\]\$(__git_ps1 '(%s)') " # Git status
+#  PS1+="\[$Purple\]\W/ \[$Color_Off\]$ " # Shortpath/ $
+#}
+#PROMPT_COMMAND='set_prompt'
+#
 ### Symbols
-FancyX='\342\234\227'
-Checkmark='\342\234\223'
+#FancyX='\342\234\227'
+#Checkmark='\342\234\223'
 
 ### Color Definitions
 # Reset
